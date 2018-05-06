@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  
+  get '/songs', to: 'songs#index', as: 'songs'
+  get '/audio', to: 'audio#index', as: 'audio'
   get '/promo', to: 'promo#index', as: 'promo'
 
   devise_for :users, path: '', path_names: { sign_in: 'login',

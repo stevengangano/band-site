@@ -2,17 +2,7 @@
 	<div class="col-lg-7 col-md-7" style="border-radius: 5px;">
 		<p></p>
 		<div class="bio">
-		<% if current_user %>
-			<%= link_to "Add New Event", new_event_path %>
-		<% end %>
-		<% @events.each do |e| %>
-			<p style="letter-spacing: 1px;"> <%= e.event %> </p>
-			<% if current_user %>
-				<%= link_to 'Edit', edit_event_path(e), class: "btn btn-xs btn-primary" %> 
-				<%= link_to 'Delete', event_path(e), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %>
-			<% end %>
-			<br>
-		<% end %>
+			<h1> Songs go here </h1>
 		</div>	
 	</div>
 	<div class="col-lg-5 col-md-5 col-sm-12" style="background-color:#F9F9F9; border-radius: 0 5px 5px 0;">
@@ -31,8 +21,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-

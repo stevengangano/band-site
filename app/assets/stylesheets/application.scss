@@ -6,7 +6,13 @@
 @import "bootstrap";
 
 body {
+	background-image: url('https://images.unsplash.com/photo-1461784121038-f088ca1e7714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdb6ebf5fff5c45057753ff1191fa0be&auto=format&fit=crop&w=1650&q=80');
 	background-color: gray;
+}
+
+/*navbar*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
 }
 
 .bio,
@@ -38,22 +44,115 @@ height: 100%;
   margin-bottom: 30px;
 }
 
+footer {
+	/*  position: relative;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  padding: 1rem;
+	  text-align: center;
+	  color:white;
+	  margin: 15px 0 ;*/
+	    height: 50px;
+  margin-top: -50px;
+}
+
+
+
 /*// Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap*/
 
 /*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {  }
-
-/*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {  
-	.contact {
-		border-left: 1px solid black;
-		padding-left: 15px;
+@media (min-width: 320px) and (max-width: 767px) {  
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;	
+	}
+	.navbar-default .navbar-nav>li>a {
+		color: white;
+		text-align: right;
+	}
+	.navbar-default .navbar-nav>li>a:hover {
+		background-color: white;
+		border-radius: 5px;
+		color: black;
 	}
 }
 
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;	
+	}
+	.navbar-default .navbar-nav>li>a {
+		color: white;
+		text-align: right;
+	}
+	.navbar-default .navbar-nav>li>a:hover {
+		background-color: white;
+		border-radius: 5px;
+		color: black;
+	}	
+	.contact {
+/*		border-left: 1px solid black;
+		height: 575px;*/
+		padding-left: 15px;
+	}
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;	
+	}
+	.navbar-default .navbar-nav>li>a,
+	.navbar-default .navbar-brand {
+	   font-size:15px; 
+	   color:#fff; 
+	}
+	.navbar-nav,
+	.navbar-brand { 
+	   margin:40px 0;
+	}
+
+}
+
 /*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { }
+@media (min-width: 992px) { 
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;	
+	}	
+
+}
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) { 
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;	
+	}
+	.navbar-default .navbar-nav>li>a,
+	.navbar-default .navbar-brand {
+	   font-size:20px; 
+	   color:#fff; 
+	}
+	.navbar-default .navbar-nav>li>a:hover {
+		background-color: white;
+		border-radius: 5px;
+		color: black;
+	}	
+	.navbar-nav,
+	.navbar-brand { 
+	   margin:40px 0 20px 0;
+	}
+
+}
