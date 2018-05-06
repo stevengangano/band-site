@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  
+  get '/promo', to: 'promo#index', as: 'promo'
+
+  devise_for :users, path: '', path_names: { sign_in: 'login',
+  sign_out: 'logout', sign_up: 'register'}
   resources :events
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

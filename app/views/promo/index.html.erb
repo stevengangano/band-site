@@ -3,17 +3,9 @@
 		<div class="col-lg-7 col-md-7 col-sm-12">
 			<p></p>
 			<div class="bio">
-			<% if current_user %>
-				<%= link_to "Add New Event", new_event_path %>
-			<% end %>
-			<% @events.each do |e| %>
-				<p style="letter-spacing: 1px;"> <%= e.event %> </p>
-				<% if current_user %>
-					<%= link_to 'Edit', edit_event_path(e), class: "btn btn-xs btn-primary" %> 
-					<%= link_to 'Delete', event_path(e), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %>
-				<% end %>
-				<br>
-			<% end %>
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/mY6dUq0WQ-I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>	
+				</div>
 			</div>
 			
 		</div>

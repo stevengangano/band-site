@@ -15,10 +15,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Promo Video</a></li>
+        <li><a href="/promo">Promo Video</a></li>
         <li><a href="#">Audio</a></li>
         <li><a href="#">Song List</a></li>
         <li><a href="/events">Upcoming Events</a></li>
+        <% if current_user %>
+	        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+	    <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
