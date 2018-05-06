@@ -1,0 +1,32 @@
+<div class="wrapper" style="background-color: white;">
+	<div class="row">
+		<div class="col-lg-7 col-md-7 col-sm-12">
+			<p></p>
+			<div class="bio">
+			<%= link_to "Add New Event", new_event_path %>
+			<% @events.each do |e| %>
+				<p style="letter-spacing: 1px;"> <%= e.event %> </p>
+				<%= link_to 'Edit', edit_event_path(e), class: "btn btn-xs btn-primary" %> 
+				<%= link_to 'Delete', event_path(e), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %>
+				<br>
+			<% end %>
+			</div>
+			
+		</div>
+		<div class="col-lg-5 col-md-5 col-sm-12">
+			<div class="contact" style="background-color: #F9F9F9;">
+				<p>
+					<p style="font-weight: bold;">Contact Info</p>
+
+					<p>Call or email us at:</p>
+
+					<p>1-510-378-1439</p>
+
+					<p>entouragetheband@yahoo.com</p>
+
+					*Disclaimer: Members of the band shown on our website are subject to change without notice	
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
