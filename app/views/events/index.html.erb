@@ -8,7 +8,8 @@
 		<% @events.each do |e| %>
 			<p style="letter-spacing: 1px;"> <%= e.event %> </p>
 			<% if current_user %>
-				<%= link_to 'Edit', edit_event_path(e), class: "btn btn-xs btn-primary" %> 
+
+				<%= link_to 'Edit', edit_event_path(e), class: "btn btn-xs btn-primary", style:"margin-right: 5px;" %> 
 				<%= link_to 'Delete', event_path(e), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %>
 			<% end %>
 			<br>
