@@ -5,9 +5,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+   height: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
 	background-image: url('https://images.unsplash.com/photo-1461784121038-f088ca1e7714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdb6ebf5fff5c45057753ff1191fa0be&auto=format&fit=crop&w=1650&q=80');
 	background-color: gray;
+	position: relative;
+	padding: bottom 6rem;
+	min-height: 100%;
 }
 
 /*navbar*/
@@ -45,16 +59,13 @@ height: 100%;
 }
 
 footer {
-	/*  position: relative;
-	  right: 0;
-	  bottom: 0;
-	  left: 0;
-	  padding: 1rem;
-	  text-align: center;
-	  color:white;
-	  margin: 15px 0 ;*/
-	    height: 50px;
-  margin-top: -50px;
+	text-align: center;
+	color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
 }
 
 
@@ -78,6 +89,13 @@ footer {
 		background-color: white;
 		border-radius: 5px;
 		color: black;
+	}
+	.navbar-toggle {
+		margin-top: 35px;
+	}
+
+	.navbar-brand {
+		margin-top: 20px;
 	}
 }
 
