@@ -1,9 +1,14 @@
 /* ...
+*= require initaudioplayer-1.css
 *= require slick-theme
 *= require slick
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.carousel img {
+    min-width: 100%;
+}
 
 html {
    height: 100%;
@@ -101,6 +106,16 @@ footer {
 	.navbar-brand {
 		margin-top: 20px;
 	}
+	.carousel .item{
+	    height: 320px;
+	}
+
+	.item img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-height: 320px;
+	}
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -176,5 +191,14 @@ footer {
 	.navbar-brand { 
 	   margin:40px 0 20px 0;
 	}
+	.carousel .item{
+	    height:500px;
+	}
 
+	.item img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-height:500px;
+	}
 }
