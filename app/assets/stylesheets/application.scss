@@ -22,6 +22,14 @@ html {
   box-sizing: inherit;
 }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+color: white; /* <—– change your color here*/
+background-color: transparent;
+}
+
+
 body {
 /*	background-image: url('https://images.unsplash.com/photo-1461784121038-f088ca1e7714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdb6ebf5fff5c45057753ff1191fa0be&auto=format&fit=crop&w=1650&q=80');
 */	background-color: black;
@@ -38,11 +46,10 @@ body {
 }
 .navbar-default .navbar-nav>li>a{
 	font-family: 'Montserrat', sans-serif;
-	color: gold;
+	color:gold;
 }
 .navbar-default .navbar-nav>li>a:hover {
-	background-color:gray;
-	color:gold;
+	color:white;
 	border-radius:5px;
 }
 .navbar-toggle {
@@ -107,7 +114,7 @@ footer {
 		text-align: right;
 	}
 	.navbar-toggle {
-		margin-top: 35px;
+		margin-top: 20px;
 	}
 	.carousel .item{
 	    height: 320px;
@@ -143,7 +150,7 @@ footer {
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
 	.navbar-default {
-		
+
 	}
 	.navbar-default .navbar-nav>li>a {
 	   font-size:20px; 

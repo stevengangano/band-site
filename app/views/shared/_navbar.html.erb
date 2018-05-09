@@ -15,11 +15,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/promo">PROMO VIDEO</a></li>
-        <li><a href="/audio">AUDIO</a></li>
-        <li><a href="/songs">SONG LIST</a></li>
-        <li><a href="/events">UPCOMING EVENTS</a></li>
+        <li class="<%= 'active' if current_page?(root_path) %>"><a href="/">HOME</a></li>
+        <li class="<%= 'active' if current_page?(promo_path) %>"><a href="/promo">PROMO VIDEO</a></li>
+        <li class="<%= 'active' if current_page?(audio_path) %>"><a href="/audio">AUDIO</a></li>
+        <li class="<%= 'active' if current_page?(songs_path) %>"><a href="/songs">SONG LIST</a></li>
+        <li class="<%= 'active' if current_page?(events_path) %>"><a href="/events">UPCOMING EVENTS</a></li>
         <% if current_user %>
 	        <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
 	    <% end %>
