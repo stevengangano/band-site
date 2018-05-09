@@ -15,8 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require vendors/amazingaudioplayer
-//= require vendors/initaudioplayer-1
-//= require slick.min
+//= require audioPlayer
 //= require main
 //= require_tree .

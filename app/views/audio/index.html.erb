@@ -2,22 +2,16 @@
 	<div class="col-lg-7 col-md-7" style="border-radius: 5px;">
 		<p></p>
 		<div class="bio">
-			<h1> Music playlist goes here </h1>
-			    <!-- Insert to your webpage where you want to display the audio player -->
-    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:auto;margin:0px auto 0px;">
-        <ul class="amazingaudioplayer-audios" style="display:none;">
-            <li data-artist="Stebz" data-title="I&apos;m hood" data-album="Stabbin Stebz" data-info="" data-image="" data-duration="28">
-          
-                <audio src="<%= audio_path 'SampleAudio_0.4mb.mp3'%>" type="audio/mpeg" controls>
-    Your browser does not support the audio element.
-</audio>
-
-
-            </li>
-        </ul>
-        <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="jquery mp3 player">music player for website</a></div>
-    </div>
-    <!-- End of body section HTML codes -->
+		    <audio src="" controls id="audioPlayer">
+		        Sorry, your browser doesn't support html5!
+		    </audio>
+		    <ul id="playlist">
+		       <li class="current-song">
+		        	<a href="<%= asset_path 'assets/SampleAudio_0.4mb.mp3' %>" type="audio/mpeg" controls>
+		    			Centsation Band - Sample </a></li>
+		        <li><a href="Severe%20Tire%20Damage.mp3">Severe Tire Damage</a></li>
+		        <li><a href="Broken%20Reality.mp3">Broken Reality</a></li>
+		    </ul>
 		</div>	
 	</div>
 	<div class="col-lg-5 col-md-5 col-sm-12" style="background-color:#F9F9F9; border-radius: 5px;">
@@ -37,4 +31,7 @@
 	</div>
 </div>
 
-
+<script>
+	// loads the audio player
+	audioPlayer();
+</script>
