@@ -1,27 +1,13 @@
-<div class="row">
-  <div class='col-xs-12'>
-
-        <%= form_for @event do |f| %>
-        <div class="form-group">
-          <div class="control-label col-lg-2 col-md-2 col-sm-2">
-              <!--Displays "title" -->
-              <%= f.label :event, style:"color: white;" %> 
-          </div>
-          <div class="col-sm-8">
-              <!--Displays input box, ":title" grabs from  -->
-              <%= f.text_field :event, class: "form-control", placeholder: "", autofocus: true %>    
-          </div>
-        </div>
-    
-       <div class="form-group">
-         <div class="col-sm-10 col-lg-offset-2 col-md-offset-2">
-            <!--Creates a submit button -->
-            <%= f.submit class:"btn btn-primary btn-sm"%> 
-         </div>
-       </div>
-  
-
-        <% end %>
-
-   </div>
+<div class="row" style="background-color:white;width:75%;margin:0 auto;border-radius:5px;padding:20px;">
+  <div class="col-md-12">
+    <form role="form">
+      <%= form_for @event do |f| %>         
+      <div class="form-group">
+        <%= f.label :event, class:'event-label', style:"color:black;" %> 
+        <%= f.text_field :event, class: "form-control", placeholder: "", autofocus: true %> 
+      </div>
+      <%= f.submit class:"event-btn btn btn-primary btn-sm"%> 
+      <% end %>
+    </form>
+  </div>
 </div>
