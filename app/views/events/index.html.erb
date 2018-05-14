@@ -6,7 +6,7 @@
 			<h4 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add New Event", new_event_path, class:'add-event' %></h5>
 		<% end %>
 		<% @events.each do |e| %>
-			<p style="letter-spacing: 1px;"> <%= e.event %> </p>
+			<p style=""> <%= e.event %> </p>
 			<% if current_user %>
 
 				<%= link_to 'Edit', edit_event_path(e), class: "edit-btn btn btn-xs btn-primary", style:"margin-right: 5px;" %> 
