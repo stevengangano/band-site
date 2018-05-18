@@ -1,13 +1,14 @@
 <div class="row" style="background-color:white;width:75%;margin:0 auto;border-radius:5px;padding:20px;">
   <div class="col-md-12">
-    <form role="form">
-      <%= form_for @event do |f| %>         
+    <%= form_for @event do |f| %> 
+    <form role="form">     
       <div class="form-group">
         <%= f.label :event, class:'event-label', style:"color:black;" %> 
         <%= f.text_area :event, class: "form-control", placeholder: "Add a new event", rows:'12', autofocus: true %> 
       </div>
       <%= f.submit class:"event-btn btn btn-primary btn-sm"%> 
-      <% end %>
     </form>
+    <% end %>
   </div>
 </div>
+
