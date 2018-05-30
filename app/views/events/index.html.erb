@@ -1,12 +1,12 @@
-<div class="row" style="background-color: #F9F9F9; border-radius:5px;border: 1px solid #E3E3E3;">
-	<div class="col-lg-7 col-md-7" style="background-color: white;border-radius: 5px;">
+<div class="row card" style="; border-radius:5px;border: 1px solid #E3E3E3;">
+	<div class="col-lg-8 col-md-8 col-sm-12" style="border-radius: 5px;">
 		<p></p>
 		<div class="bio">
 		<% if current_user %>
-			<h4 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add New Event", new_event_path, class:'add-event' %></h5>
+			<h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add a Song", new_event_path, class:'add-event' %></h5>
 		<% end %>
 		<% @events.each do |e| %>
-			<p> <%= e.event %> </p>
+			<h6> <%= e.event %> </h6>
 			<% if current_user %>
 
 				<%= link_to '', edit_event_path(e), class: "glyphicon glyphicon-pencil", style:"margin-right: 5px;" %> 
@@ -16,7 +16,7 @@
 		<% end %>
 		</div>	
 	</div>
-	<div class="col-lg-5 col-md-5 col-sm-12" style="background-color:#F9F9F9; border-radius: 5px;">
+	<div class="col-lg-4 col-md-4 col-sm-12" style=" border-radius: 5px;">
 		<div class="contact">
 			<%= render 'shared/contact' %>
 		</div>

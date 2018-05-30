@@ -32,21 +32,40 @@
   </a>
 </div>
 
-<div class="wrapper" style="background-color:white;border-radius: 5px;">
+<div class="card" style="border-radius: 5px;">
 	<div class="row">
-		<div class="col-lg-7 col-md-7 col-sm-12">
+		<div class="col-lg-8 col-md-8 col-sm-12">
 			<p></p>
 			<div class="bio">
+        <h3 class="text-center"> Centsation Band </h3>
 				<p style="letter-spacing: 1px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <section id="events">
+        <% if current_user %>
+          <h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add an Event", new_show_path, class:'add-event' %></h5>
+        <% end %>
+        <h3 class="text-center"> Our Events </h3>
+        <% @shows.each do |show| %>
+          <h5 class="text-center"><%= show.shows %>
+            
+            <% if current_user %>
+            <%= link_to '', edit_show_path(show), class: "glyphicon glyphicon-pencil", style:"margin-right: 5px;" %> 
+            <%= link_to '', show_path(show), method: :delete, data: {confirm: "Are you sure?"}, style:'color:red;', class: "glyphicon glyphicon-trash" %>
+          <% end %>
+
+          </h5>
+    
+        <% end %>
+      </section>
 			</div>
 		</div>
-		<div class="col-lg-5 col-md-5 col-sm-12">
-			<div class="contact" style="background-color:#F9F9F9;border-radius: 0 5px 5px 5px;border:1px solid #E3E3E3;">
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="contact" style="border-radius: 0 5px 5px 5px;">
           <%= render 'shared/contact' %>
 			</div>
 		</div>

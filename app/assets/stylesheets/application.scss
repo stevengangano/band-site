@@ -1,11 +1,13 @@
 /* ...
 *= require initaudioplayer-1.css
+*= require font-awesome
 *= require slick-theme
 *= require slick
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 
 .carousel img {
     min-width: 100%;
@@ -31,17 +33,23 @@ background-color: transparent;
 
 
 body {
-/*	background-image: url('https://images.unsplash.com/photo-1461784121038-f088ca1e7714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdb6ebf5fff5c45057753ff1191fa0be&auto=format&fit=crop&w=1650&q=80');
-*/	background-color: black;
+	background-image: url(background3.png);
 	position: relative;
 	padding: bottom 6rem;
 	min-height: 100%;
 }
 
+.card {
+	background-image: url(background2.png);
+}
+
 /*navbar*/
 .navbar-default {
 	background-color: transparent;
-	border-color:transparent;
+	border-left: transparent;
+	border-right: transparent;
+	border-top: transparent;
+	border-bottom:1px solid yellow;
 }
 .navbar-default .navbar-nav>li>a{
 	font-family: 'Montserrat', sans-serif;
@@ -121,6 +129,7 @@ footer {
     padding: 1rem;
 }
 
+
 /*Carousel Fade*/
 .carousel-fade .carousel-inner .item {
   opacity: 0;
@@ -173,6 +182,83 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
+/*Carousel Fade End*/
+
+/*Profile Card*/
+
+/*.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}*/
+
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/*Profile Card End*/
 
 
 
@@ -187,8 +273,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 320px) and (max-width: 767px) {  
+	.div.navbar-header::after {
+		border: 1px solid yellow;
+	}
 	.navbar-default {
-		border-bottom: 1px solid white;
+		border-bottom: 1px solid yellow;
 	}		
 	.navbar-default .navbar-nav>li>a {
 		text-align: right;
@@ -249,11 +338,15 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	.carousel .item{
 	    height:500px;
 	}
-
 	.item img {
 	    position: absolute;
 	    top: 0;
 	    left: 0;
 	    min-height:500px;
 	}
+ 	.navbar-default .navbar-nav > li > a {
+ 		font-size: 95%;
+ 	}
 }
+
+

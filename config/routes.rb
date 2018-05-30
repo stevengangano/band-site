@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
 
-  get '/songs', to: 'songs#index', as: 'songs'
-  get '/audio', to: 'audio#index', as: 'audio'
-  get '/promo', to: 'promo#index', as: 'promo'
+  resources :shows
+  get '/contact', to: 'contact#index', as: 'contact'
+  get '/videos', to: 'videos#index', as: 'videos'
+  get '/about', to: 'about#index', as: 'about'
 
   devise_for :users, path: '', path_names: { sign_in: 'login',
   sign_out: 'logout', sign_up: 'register'}
-  resources :events
-  root to: "home#index"
+  resources :shows
+  get '/songs', to: 'events#index', as: 'events'
+  resources :events, only: [:new, :create, :destroy, :edit, :update]
+  root to: "shows#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
