@@ -37,8 +37,8 @@
 		<div class="col-lg-8 col-md-8 col-sm-12">
 			<p></p>
 			<div class="bio">
-        <h3 class="text-center"> Centsation Band </h3>
-				<p style="letter-spacing: 1px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <h3 class="text-center title"> Centsation Band </h3>
+				<p  class="text-center" style="letter-spacing: 1px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -49,7 +49,7 @@
         <% if current_user %>
           <h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add an Event", new_show_path, class:'add-event' %></h5>
         <% end %>
-        <h3 class="text-center"> Our Events </h3>
+        <h3 class="text-center title"> Our Events </h3>
         <% @shows.each do |show| %>
           <h5 class="text-center"><%= show.shows %>
             
@@ -58,14 +58,14 @@
             <%= link_to '', show_path(show), method: :delete, data: {confirm: "Are you sure?"}, style:'color:red;', class: "glyphicon glyphicon-trash" %>
           <% end %>
 
-          </h5>
+          </h>
     
         <% end %>
       </section>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12">
-			<div class="contact" style="border-radius: 0 5px 5px 5px;">
+			<div class="contact contact-shows" style="border-radius: 0 5px 5px 5px;">
           <%= render 'shared/contact' %>
 			</div>
 		</div>

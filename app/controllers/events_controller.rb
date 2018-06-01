@@ -37,13 +37,13 @@ class EventsController < ApplicationController
 	    end
 	end
 
-	 #Delete route (/articles/:id)
+	#Delete route (/articles/:id)
   	def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
-    flash[:notice] = "Event was successfully deleted"
-    redirect_to events_path        
-  end
+	    @event = Event.find(params[:id])
+	    @event.destroy
+	    flash[:notice] = "Event was successfully deleted"
+	    redirect_to events_path        
+  	end
 
 	private
 	#method to add data to the database

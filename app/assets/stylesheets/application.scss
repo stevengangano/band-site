@@ -1,13 +1,29 @@
 /* ...
-*= require initaudioplayer-1.css
 *= require font-awesome
-*= require slick-theme
-*= require slick
+
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Changa+One');
 
+
+.bio {
+	font-family: 'Changa One', cursive;
+}
+
+.contact {
+	font-family: 'Changa One', cursive;
+}
+
+.fa {
+	font-size:25px;
+}
+
+.fa-facebook {
+	color: orange;
+}
 
 .carousel img {
     min-width: 100%;
@@ -49,7 +65,7 @@ body {
 	border-left: transparent;
 	border-right: transparent;
 	border-top: transparent;
-	border-bottom:1px solid yellow;
+	border-bottom:1px solid #FED531;
 }
 .navbar-default .navbar-nav>li>a{
 	font-family: 'Montserrat', sans-serif;
@@ -182,45 +198,12 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
-/*Carousel Fade End*/
+.title {
+	font-family: 'Monoton', cursive;
+    color:black;
+}
 
 /*Profile Card*/
-
-/*.profile-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
-.title {
-    color: grey;
-    font-size: 18px;
-}
-
-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-}
-
-button:hover, a:hover {
-    opacity: 0.7;
-}*/
-
 
 .profile-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -239,8 +222,8 @@ button:hover, a:hover {
     display: table;
 }
 
-.title {
-    color: grey;
+.band-role {
+	color:grey;
 }
 
 .button {
@@ -261,24 +244,19 @@ button:hover, a:hover {
 
 /*Profile Card End*/
 
-
-
-
-
-
-
-
-
 /*// Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap*/
 
 /*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 320px) and (max-width: 767px) {  
+@media (min-width: 320px) and (max-width: 767px) {
+	.calvin {
+		margin-top:25px;
+	}  
 	.div.navbar-header::after {
-		border: 1px solid yellow;
+		border: 1px solid #FED531;
 	}
 	.navbar-default {
-		border-bottom: 1px solid yellow;
+		border-bottom: 1px solid #FED531;
 	}		
 	.navbar-default .navbar-nav>li>a {
 		text-align: right;
@@ -295,6 +273,13 @@ button:hover, a:hover {
 	    left: 0;
 	    min-height: 320px;
 	}
+	.contact {
+		text-align:center;
+	}
+	.contact-shows {
+		position:relative; 
+		bottom:35px;
+	}
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -307,13 +292,21 @@ button:hover, a:hover {
 		font-size:11px; 
 	}	
 	.contact {
+		text-align:center;
 		padding-left: 15px;
 	}
 	.navbar-nav,
 	.navbar-brand { 
 	   margin:40px 0;
 	}
-
+ 	.contact-about {
+ 		position:relative; 
+ 		bottom:30px;		
+ 	}
+	.contact-shows {
+ 		position:relative; 
+ 		bottom:30px;
+ 	}
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -347,6 +340,14 @@ button:hover, a:hover {
 	}
  	.navbar-default .navbar-nav > li > a {
  		font-size: 95%;
+ 	}
+ 	.contact-about {
+ 		position:relative; 
+ 		bottom:30px;		
+ 	}
+ 	.contact-shows {
+ 		position:relative; 
+ 		bottom:12px;
  	}
 }
 

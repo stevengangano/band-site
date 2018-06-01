@@ -1,14 +1,14 @@
 <div class="row card" style="; border-radius:5px;border: 1px solid #E3E3E3;">
 	<div class="col-lg-8 col-md-8 col-sm-12" style="border-radius: 5px;">
 
-		<h3 class="text-center"> Song List </h3>
+		<h3 class="text-center title"> Song List </h3>
 		<p></p>
 		<div class="bio">
 		<% if current_user %>
 			<h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add a Song", new_event_path, class:'add-event' %></h5>
 		<% end %>
 		<% @events.each do |e| %>
-			<h6> <%= e.event %> </h6>
+			<h5 class="text-center"> <%= e.event %> </h5>
 			<% if current_user %>
 
 				<%= link_to '', edit_event_path(e), class: "glyphicon glyphicon-pencil", style:"margin-right: 5px;" %> 
