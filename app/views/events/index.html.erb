@@ -8,12 +8,14 @@
 			<h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add a Song", new_event_path, class:'add-event' %></h5>
 		<% end %>
 		<% @events.each do |e| %>
-			<h5 class="text-center"> <%= e.event %> </h5>
-			<% if current_user %>
+			<h5 class="text-center"> <%= e.event %> 
 
+			<% if current_user %>
 				<%= link_to '', edit_event_path(e), class: "glyphicon glyphicon-pencil", style:"margin-right: 5px;" %> 
 				<%= link_to '', event_path(e), method: :delete, data: {confirm: "Are you sure?"}, style:'color:red;', class: "glyphicon glyphicon-trash" %>
 			<% end %>
+
+			</h5>
 			<br>
 		<% end %>
 		</div>	

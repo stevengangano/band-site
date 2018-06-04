@@ -33,6 +33,11 @@
     min-width: 100%;
 }
 
+.centsation-bio {
+	margin:0 23px; 
+	letter-spacing: 1px;
+}
+
 html {
    height: 100%;
    box-sizing: border-box;
@@ -94,7 +99,7 @@ body {
 .bio,
 .contact {
 	padding: 15px;
-	
+
 }
 /*Responsive youtube*/
 .video-container {
@@ -324,6 +329,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+	.centsation-bio {
+		margin:0 50px;
+	}
 	.logo {
 		position:relative;
 		bottom:10px;
