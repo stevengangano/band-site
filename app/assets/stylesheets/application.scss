@@ -8,6 +8,29 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 @import url('https://fonts.googleapis.com/css?family=Changa+One');
 
+.carousel img {
+ 		min-width:100%;
+        object-fit: contain;
+}
+
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;min-width:100%;}
+
+@media (min-width: 1100px) { 
+
+	.carousel img {
+ 		min-width:100%;
+        object-fit: contain;
+}
+
+.carousel,.item,.active{
+	min-height:100%;
+}
+.carousel-inner{
+min-height:100%;min-width:100%;
+}
+
+}
 
 .bio {
 	font-family: 'Changa One', cursive;
@@ -29,9 +52,7 @@
 	color: #377BB5;
 }
 
-.carousel img {
-    min-width: 100%;
-}
+
 
 .centsation-bio {
 	margin:0 23px; 
