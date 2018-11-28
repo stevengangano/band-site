@@ -13,6 +13,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise', '~> 4.2'
+gem 'sprockets', '~> 3.7', '>= 3.7.2'
 
 
 # Use jquery as the JavaScript library
