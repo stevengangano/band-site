@@ -42,16 +42,29 @@ min-height:100%;min-width:100%;
 
 .fa {
 	font-size:25px;
-	margin:2px;
 }
 
 .fa-instagram {
-	color:black;
+	margin-left:3px;
+	padding:5px;
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+	color:white;
 }
 .fa-facebook {
+	position:relative;
+	top:5px;
+	font-size:36px;
 	color: #377BB5;
 }
 
+.fa-instagram,
+.fa-facebook {
+	border-radius:5px;
+}
 
 
 .centsation-bio {
@@ -239,6 +252,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .profile-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius:5px;
+    background-image: url(background3.png);
+}
+
+.icons {
+	line-height: 50px;
 }
 
 /* Some left and right padding inside the container */
@@ -253,8 +271,13 @@ now override the 3.3 new styles for modern browsers & apply opacity
     display: table;
 }
 
+.name {
+	color:#FED430;
+}
+
 .band-role {
-	color:grey;
+	font-family: 'Montserrat', sans-serif;
+	color:#FED430;
 }
 
 .button {
@@ -280,6 +303,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 320px) and (max-width: 767px) {
+	.profile-card {
+		text-align:center;
+	}
 	.calvin {
 		margin-top:25px;
 	}  
