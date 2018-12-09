@@ -37,29 +37,27 @@
 		<div class="col-lg-12 col-md-12 col-sm-12">
 			<p></p>
 			<div class="bio">
-        <h3 class="text-center">The Centsation Band </h3>
-				<p class="centsation-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3 class="bio-header-font text-center">The Centsation Band </h3>
+
+				<h5 class="bio-font">The Centsation Band is your key for live musical entertainment at your next event! We play all the greatest hits you know and love from 70’s, 80’s, 90’s & 00’s. The Centsation Band’s genres include Funk, R&B, Disco, Motown, and Top 40's hits. The Centsation Band will add that special touch to your special occasion and will have your guests dancing all night long! </h5>
+
+        <br>
+
+        <h5 class="bio-font">The band is led by the brother-sister duo, Calvin & Ashley Soriano. They’ve both have been singing since the young age of 4. They began performing with various bands around the Bay Area for almost a decade. With their well-versed musical and entertainment background, you and your guests are promised an experience you’ll always remember. </h5>
 
       <section id="events">
         <% if current_user %>
           <h5 class="text-center" style="font-weight:bold;"><%= link_to "Click to Add an Event", new_show_path, class:'add-event' %></h5>
         <% end %>
-        <h3 class="text-center"> Our Events </h3>
+        <h3 class="bio-header-font text-center"> Our Events </h3>
         <% @shows.each do |show| %>
-          <h5 class="text-center"><%= show.shows %>
+          <h5 class="bio-font text-center"><%= show.shows %>
             
             <% if current_user %>
             <%= link_to '', edit_show_path(show), class: "glyphicon glyphicon-pencil", style:"margin-right: 5px;" %> 
             <%= link_to '', show_path(show), method: :delete, data: {confirm: "Are you sure?"}, style:'color:red;', class: "glyphicon glyphicon-trash" %>
           <% end %>
-
           </h5>
-    
         <% end %>
       </section>
 			</div>
