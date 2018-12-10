@@ -1,0 +1,26 @@
+<div class="row" style="background-color:white;width:75%;margin:0 auto;border-radius:5px;padding:20px;">
+  <div class="col-md-12">
+    <%= form_for @song do |f| %> 
+    <form role="form">     
+      <div class="form-group">
+        <%= f.label 'Song', class:'event-label', style:"color:black;" %> 
+        <%= f.text_area :song, class: "form-control", placeholder: "Add a new song", rows:'12', autofocus: true %> 
+      </div>
+      <%= f.submit 'Submit', class:"event-btn btn btn-primary btn-sm"%> 
+    </form>
+    <% end %>
+  </div>
+</div>
+
+<footer style="position: relative;
+              height: 40px;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              padding: 1rem;
+              text-align: center;
+              color:white;
+              margin:15px 0;">
+  <!-- &copy; Censation Band 2018 -->
+</footer>
+

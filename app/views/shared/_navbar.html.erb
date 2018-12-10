@@ -18,7 +18,7 @@
         <li class="<%= 'active' if current_page?(root_path) %>"><a href="/">HOME</a></li>
         <li class="<%= 'active' if current_page?(about_path) %>"><a href="/about">ABOUT US</a></li>
         <li class="<%= 'active' if current_page?(videos_path) %>"><a href="/videos">VIDEOS</a></li>
-        <li class="<%= 'active' if current_page?(events_path) %>"><a href="/events">SONG LIST</a></li>
+        <li class="<%= 'active' if current_page?(events_path) %>"><a href="/songs">SONG LIST</a></li>
         <li class="<%= 'active' if current_page?(contact_path) %>"><a href="/contact">CONTACT</a></li>
         <% if current_user %>
 	        <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>

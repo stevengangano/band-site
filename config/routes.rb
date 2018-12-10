@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login',
   sign_out: 'logout', sign_up: 'register'}
   resources :events, only: [:index, :new, :create, :destroy, :edit, :update]
+  resources :songs
+
+
   root to: "shows#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
