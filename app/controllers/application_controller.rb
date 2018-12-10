@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   
   #Redirect to /events after logging in
   def after_sign_in_path_for(resource)
-  	events_path #your path
+  	root_path #your path
   end
 end
