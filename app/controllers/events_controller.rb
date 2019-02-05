@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 	def create
 		#render plain: params[:article].inspect 
 		@event = Event.new(event_params)
+		#only if Devise is set up
 		@event.user = current_user
 		if @event.save 
 		    flash[:notice] = "Event was successfully created" 
