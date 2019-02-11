@@ -20,12 +20,6 @@
 //= require main
 //= require_tree .
 
-
-//stop auto-slide for video carousel
-$(document).ready(function() {      
-   $('.carousel').carousel('pause');
-});
-
 //slider slideshow
 $(document).ready(function (){
   $(".rslides").responsiveSlides();
