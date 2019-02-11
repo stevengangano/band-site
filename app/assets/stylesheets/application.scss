@@ -10,28 +10,56 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500');
 
 
-.carousel img {
- 		min-width:100%;
-        object-fit: contain;
-}
 
-.carousel,.item,.active{height:100%;}
-.carousel-inner{height:100%;min-width:100%;}
+
+/*! http://responsiveslides.com v1.55 by @viljamis */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
 
 @media (min-width: 1100px) { 
-
 	.carousel img {
- 		min-width:100%;
-        object-fit: contain;
-}
+	 		min-width:100%;
+	        object-fit: contain;
+	}
 
-.carousel,.item,.active{
-	min-height:100%;
-}
-.carousel-inner{
-min-height:100%;min-width:100%;
-}
+	.carousel,.item,.active{
+		min-height:100%;
+	}
 
+	.carousel-inner {
+		min-height:100%;min-width:100%;
+	}
 }
 
 .bio,
@@ -46,9 +74,8 @@ min-height:100%;min-width:100%;
 .bio-font {
 	letter-spacing:1px;
 	font-family: 'Roboto', sans-serif;
-
-
 }
+
 
 .fa {
 	font-size:25px;
@@ -142,20 +169,18 @@ body {
 
 
 /*Responsive youtube*/
-.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px; height: 0; overflow: hidden;
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
 }
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*Edit User*/
