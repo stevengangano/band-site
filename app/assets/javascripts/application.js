@@ -16,8 +16,6 @@
 //= require responsiveslides.min
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require audioPlayer
-//= require main
 //= require_tree .
 
   $(function() {
