@@ -1,4 +1,4 @@
 class Song < ActiveRecord::Base
-	belongs_to :user, -> { order "title asc" }
+	belongs_to :user
 end
 
